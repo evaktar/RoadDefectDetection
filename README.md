@@ -1,2 +1,2 @@
 # RoadDefectDetection
-Project for the Ada Lovelace Colloquial 2026
+Project for the Ada Lovelace Colloquium 2026
