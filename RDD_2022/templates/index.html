@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YOLO Object Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Road Defect Detection</h1>
+        <h2>(YOLOv8n)</h2>
+        <form method="POST" enctype="multipart/form-data" action="/">
+            <label for="file">Upload Image (JPG/JPEG)</label>
+            <input type="file" name="file" id="file" accept="image/*" required>
+            <div class="file-name" id="file-name">No file chosen</div>
+            <input type="submit" value="Predict" id="submitBtn">
+        </form>
+    </div>
+
+    <script>
+        const fileInput = document.getElementById('file');
+        const fileNameDiv = document.getElementById('file-name');
+        const submitBtn = document.getElementById('submitBtn');
+
+        // No need to hide here anymore; CSS handles it
+        fileInput.addEventListener('change', () => {
+            if(fileInput.files.length > 0){
+                fileNameDiv.textContent = fileInput.files[0].name;
+                submitBtn.classList.add('show'); // fade in
+            } else {
+                fileNameDiv.textContent = "No file chosen";
+                submitBtn.classList.remove('show'); // fade out
+            }
+        });
+    </script>
+</body>
+</html>
