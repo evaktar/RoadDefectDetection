@@ -1,0 +1,84 @@
+/* Body */
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    background: #daecff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container */
+.container {
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 400px;
+}
+
+/* Title */
+h1 {
+    color: #000000;
+    margin-bottom: 20px;
+}
+/* Subheading */ 
+h2 {
+    color: #808080;
+    margin-bottom: 20px;
+}
+
+/* Hide default file input */
+input[type="file"] {
+    display: none;
+}
+
+/* Upload Image Button */
+label {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #00a2ff;
+    color: #ffffff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+label:hover {
+    background-color: #87c1ff;
+}
+
+/* Submit button hidden until upload */
+#submitBtn {
+    display: none;
+    padding: 12px 20px;
+    margin-top: 20px;
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: opacity 0.3s ease, background 0.3s;
+    opacity: 0;
+}
+
+/* Show button when image uploaded (.show class added in JS) */
+#submitBtn.show {
+    display: inline-block;
+    opacity: 1;
+}
+
+#submitBtn:hover {
+    background-color: #1e7e34;
+}
+
+/* Uploaded file name display */
+.file-name {
+    margin-top: 10px;
+    font-style: italic;
+    color: #555;
+}

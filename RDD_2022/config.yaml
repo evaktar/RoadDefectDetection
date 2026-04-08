@@ -1,0 +1,10 @@
+path: C:\Users\evakt\Documents\Uni\ALC\RDD_2022
+train: train
+val: val
+
+names:
+    0: Longitudinal Crack
+    1: Transverse Crack
+    2: Alligator Crack
+    3: Pothole
+    4: Other Corruption
